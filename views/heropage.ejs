@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/heropage.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <!-- <link rel="stylesheet" href="../public/css/heropage.css"> -->
+    <!-- <link rel="stylesheet" href="../public/css/global.css"> -->
+    <title>posts</title>
+</head>
+
+<body>
+    <%- include ('block/header.ejs') -%>
+    <div class="wrapper">
+        <div class="container">
+            <section class="page_title_wrap block_border f f-js-between">
+                <div class="page_title h100 f f-al-center">
+                    <h2 class="t_page_title">Моя лента</h2>
+                </div>
+                <div class="button_wrapper f f-al-center">
+                    <a class="button-1" href="/createpost">create post</a>
+                    <a class="button-1" href="#">find by tags</a>
+                </div>
+            </section>
+            <section class="posts_wrapper wh100 f f-js-center">
+                <div class="post">
+                    <div class="post_info block_border">
+
+                    </div>
+                    <div class="post_content block_border">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="/js/index.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
+
+:root {
+	--green1: #5DC64C;
+	--green2: #16701F;
+	--green3: #20311D;
+	--black0: #141313;
+	--black1: #1E1E1E;
+	--black2: #4A4747;
+
+	--headerHeight: 80px;
+}
+
+body{
+    background-color: var(--black0);
+	min-width: 100%;
+	min-height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+}
+
+/* Flex */
+.f{
+	display: flex;
+}
+.f-column{
+	display: flex;
+	flex-direction: column;
+}
+.f-al-center{
+	align-items: center;
+}
+.f-js-center {
+	align-items: center;
+}
+.f-js-end{
+	justify-content: flex-end;
+}
+.f-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.f-js-between{
+	justify-content: space-between;
+}
+
+/* Text styles */
+
+.t_page_title{
+	color: #FFF;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.t_post-title{
+	color: #FFF;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.t_post-text{
+	color: #D5D5D5;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+a.t_post-text {
+	text-decoration: none;
+	color: inherit;
+}
+
+.cp_title{
+	font-weight: bold;
+	font-size: 24px;
+}
+
+/* block styles */
+.b{
+	border: solid 1px red;
+}
+.w100{
+	width: 100%;
+}
+.h100{
+	height: 100%;
+}
+.wh100{
+	height: 100%;
+	width: 100%;
+}
+
+/* padding для дочерних элементов */
+.m-left-10>*{
+	margin-left: 10px;
+}
+.m-left-20>* {
+	margin-left: 20px;
+}
+
+/* Зеленые границы блока */
+.block_border, .border-left, .border-right{
+	position: relative;
+}
+.block_border::before,
+.block_border::after,
+.border-left::before,
+.border-right::after {
+	width: 20px;
+	height: 100%;
+	background-color: #5DC64C;
+	content: '';
+	position: absolute;
+	display: block;
+}
+.block_border::before, .border-left::before{
+	transform: translateX(-20px);
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.block_border::after, .border-right::after{
+	left: 100%;
+	top: 0;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* user block */
+.user_block{
+	display: flex;
+	justify-content: flex-start;
+	font-size: 20px;
+}
+.user_block_img{
+	margin-left: 15px;
+}
+.user_block_img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: blanchedalmond;
+}
+
+/* buttons styles */
+.button-1{
+	width: 100px;
+	height: 40px;
+	background-color: var(--black1);
+
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1.2px;
+
+	text-align: center;
+	line-height: 40px;
+
+	border-radius: 5px;
+	position: relative;
+}
+.button-1::before, .button-1::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #5DC64C;
+	position: absolute;
+}
+.button-1::before{
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.button-1::after {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	transform: translateY(-5px);
+}
+
+.small_button1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 30px;
+	background-color: white;
+	color: black;
+	border-radius: 6px;
+	font-size: 16px;
+}
+.small_button1:hover{
+	background-color: #e0a81a;
+}
+
+/* inputs styles */
+.input1 input {
+	width: 100%;
+	max-width: 300px;
+	border-radius: 6px;
+	padding: 10px 5px 10px 10px;
+	background-color: var(--black1);
+	
+	color: #b7b7b7;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+/* pages styles */
+
+.wrapper {
+	background-color: var(--black1);
+	max-width: 890px;
+	width: 100%;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	margin-top: var(--headerHeight);
+	padding-bottom: 100px;
+}
+
+.container {
+	max-width: 810px;
+	width: 100%;
+	height: max-content;
+	padding-bottom: 100px;
+}
+
+/* page title */
+.page_title_wrap {
+	width: 100%;
+	height: 70px;
+	background-color: var(--black2);
+	margin-top: 40px;
+}
+
+.page_title {
+	width: 50%;
+	padding: 0 15px 0 15px;
+}
+
+.button_wrapper>a {
+	margin: 0 15px 0 15px;
+}
+
+/* post style */
+.create_post_wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	margin-top: 40px;
+}
+
+.cp_content{
+	width: 100%;
+	max-width: 580px;
+	background-color: var(--black2);
+}
+
+.cp_info{
+	width: 100%;
+	max-width: 230px;
+	height: max-content;
+	background-color: var(--green3);
+}
+
+.cp_info_content{
+	padding: 15px 15px 15px 10px;
+}
+.cp_info_content>div, .cp_info_content>span{
+	margin-bottom: 10px;
+}
+
+.cp_content_container{
+	width: 100%;
+	height: 100%;
+}
+
+.public_content{
+	padding: 15px 15px 15px 15px;
+}
+.public_content>*{
+	border-radius: 0px 15px 15px 0px;
+	border: 3px solid #232323;
+	background-color: rgba(250, 235, 215, 0);
+	width: 100%;
+	height: auto;
+	padding: 10px 10px 10px 20px;
+	margin-bottom: 20px;
+}
+
+.p_title_space{
+	resize: none;
+	overflow-y: hidden;
+	padding: 10px 10px 0px 20px;
+}
+
+.add_element{
+	background-color: rgba(119, 117, 117, 1);
+	border-radius: 7px;
+	width: 50px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #D5D5D5;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+#add_text{
+	cursor: text;
+}
+
+.textarea_unsize{
+	resize: none;
+	overflow-y: hidden;
+}
+

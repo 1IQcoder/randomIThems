@@ -1,0 +1,47 @@
+.account_wrapper>div{
+    display: inline-flex;
+    margin: 20px 0 20px 15px;
+
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.account_wrapper>div>*{
+    margin-right: 10px;
+}
+
+.register_block {
+    margin-top: 40px;
+    height: auto;
+
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+
+    background-color: var(--black2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

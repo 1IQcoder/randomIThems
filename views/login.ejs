@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/regpage.css">
+    <title>log in your account</title>
+</head>
+
+<body>
+    <%- include ('block/header.ejs') -%>
+    <div class="wrapper">
+        <div class="container">
+            <section class="page_title_wrap block_border f f-js-between">
+                <div class="page_title h100 f f-al-center">
+                    <h2 class="t_page_title">Вход в аккаунт</h2>
+                </div>
+                <div class="button_wrapper f f-al-center">
+                </div>
+            </section>
+            <section class="block_border register_block input1">
+                <form class="login_formEl" action="/auth/submit-login" method="post">
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input name="email" type="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input name="password" type="password" required>
+                    </div>
+                    <span class="erorMessage"></span>
+                    <button class="button_style-2" id="submit_login" type="submit">Log in</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="/js/loginpage.js"></script>
+</body>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/createpost.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <title>create your post</title>
+</head>
+<body>
+    <%- include ('block/header.ejs') -%>
+    <div class="wrapper">
+        <div class="container">
+            <!-- page title -->
+            <section class="page_title_wrap block_border f f-js-between">
+                <div class="page_title h100 f f-al-center">
+                    <h2 class="t_page_title">Напишите статью!</h2>
+                </div>
+                <div class="button_wrapper f f-al-center">
+                    <a class="button-1" href="/article/create?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzkzY2NmZWIxODkxMmJkMDgwZGM3YiIsImlhdCI6MTcwNzg1OTEzMCwiZXhwIjoxNzA3OTQ1NTMwfQ.MKt0tvEA98SdF3_jZlTRppvLoOPRyMV1HoU7gjTyb8k">create post</a>
+                    <a class="button-1" href="#">find by tags</a>
+                </div>
+            </section>
+            <!-- create post block -->
+            <section class="create_post_wrapper">
+                <div class="cp_info border-left">
+                    <div class="cp_info_content f f-column">
+                        <div class="user_block f-center">
+                            <div class="user_block_name">
+                                <span class="t_page_title">npc-100lvl</span>
+                            </div>
+                            <div class="user_block_img">
+                        
+                            </div>
+                        </div>
+                        <span class="t_post-text">words: 0</span>
+                        <span class="t_post-text">symbols: 0</span>
+                        <a id="public_post_b" class="button-1" href="#">public post</a>
+                    </div>
+                </div>
+                <div class="cp_content border-right">
+                    <div class="cp_content_container">
+                        <div class="public_content">
+                            <textarea data-type="title_h1" placeholder="Введите заголовок" class="cp_title auto_height p_title_space t_post-text"></textarea>
+                        </div>
+                        <div class="add_panel f f-js-between f-al-center">
+                            <div id="add_text">
+                                <span class="t_post-text">Добавить текст</span>
+                            </div>
+                            <div class="f m-left-10 add_buttons">
+                                <div class="add_element" title="Добавить заголовок">
+                                    Aa
+                                </div>
+                                <div class="add_element" title="Добавить текст">
+                                    aa
+                                </div>
+                                <div class="add_element" title="Добавить поле для кода">
+                                    <span><</span><span>/</span><span>></span>
+                                </div>
+                                <div class="add_element" title="Добавить изображение">
+                                    img
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script type="module" src="/js/createpost.js"></script>
+</body>
+</html>
